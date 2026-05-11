@@ -6,7 +6,7 @@ from pathlib import Path
 from os import mkdir
 dn = 'Users'
 full_path = os.path.join(os.path.expanduser('~'))
-script_path = os.path.join(full_path, 'Desktop','Helper','ОчХорошаяПапка')
+script_path = os.path.join(full_path, 'Desktop','Helper','helper','ОчХорошаяПапка')
 polzak=full_path.split('\\')[-1]
 #Ещё Надо Реализовать папку для конвертации объектов. Пока идей нет
 print(f"Приветствую! Я личный ассистент пользователя {polzak}")
