@@ -4,22 +4,24 @@ import shutil
 import time
 from pathlib import Path
 from os import mkdir
-dn = 'Users'
-full_path = os.path.join(os.path.expanduser('~'))
-script_path = os.path.join(full_path, 'Desktop','Helper','helper','ОчХорошаяПапка')
-polzak=full_path.split('\\')[-1]
-#Ещё Надо Реализовать папку для конвертации объектов. Пока идей нет
-print(f"Приветствую! Я личный ассистент пользователя {polzak}")
-while True:
-    print(f"Что вы хотите сделать,{polzak}?:\n 1) Запустит ВсёБеги \n 2)Запустить сортировку Загрузки\n 3) Выискивание повторяющихся файлов в папке")
-    g=input()
-    if g=='1':
-        subprocess.run(['python',os.path.join(script_path,'runalll.py')])
-        с=input()
-    elif g=='2':
-        subprocess.run(['python',os.path.join(script_path,'hihihaha.py')])
-        c=input()
-    elif g=='3':
-        print('Укажите пожалуйста путь папки')
-        c=input()
-        subprocess.run(['python',os.path.join(script_path,'CopyThatCopycat.py'),c])
+
+def wile_comand():
+
+    while True:
+        print(f"Что вы хотите сделать,{polzak}?:\n 1 - Запусти протокол ВсёБеги \n 2 - Запусти протокол сортировки Загрузки")
+        user_choose=input()
+        protocol = {'1':'runalll.py','2':'sort_download.py'}
+        try:
+            subprocess.Popen(['python',os.path.join(script_path,r'ОчХорошаяПапка',protocol[user_choose])])
+        except:
+            print("Такой команды нет")
+
+if __name__=='__main__':
+
+    full_path = os.path.join(os.path.expanduser('~'))
+    real_path = os.path.realpath(__file__)
+    real_path = real_path.replace(r'\ULTIMATIVE.py','')
+    script_path = os.path.join(real_path)
+    polzak=full_path.split('\\')[-1]
+    print(f"Приветствую! Я личный ассистент пользователя {polzak}")
+    wile_comand()

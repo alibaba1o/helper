@@ -1,6 +1,15 @@
+import os
 import subprocess
+real_path = os.path.realpath(__file__)
+real_path = real_path.replace('runalll.py', '')
+
+folder = real_path + r'ПапкаДляПротоколаВсеБеги'
+os.chdir(folder)
 print('Приятного пользования, менеджер!')
-subprocess.Popen(r"C:\Users\kirya\Desktop\zapret-discord-youtube\general (ALT111).bat")
-subprocess.Popen(r"C:\Program Files\AmneziaVPN\AmneziaVPN.exe")
-subprocess.Popen(r"C:\Users\kirya\Desktop\TgWsProxy_windows.exe")
+subprocess.Popen(r"AmneziaVPN.lnk",shell=True)
+subprocess.Popen(r"TgWsProxy_windows.exe")
+os.chdir(folder+r'\zapret-discord-youtube')
+subprocess.Popen(r"general (FAKE TLS AUTO33).bat",shell=True)
+os.chdir('..')
 subprocess.Popen(r"C:\Users\kirya\AppData\Roaming\Telegram Desktop\Telegram.exe")
+
