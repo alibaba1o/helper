@@ -8,7 +8,7 @@ from os import mkdir
 def wile_comand():
 
     while True:
-        print(f"Что вы хотите сделать,{polzak}?:\n 1 - Запусти протокол ВсёБеги \n 2 - Запусти протокол сортировки Загрузки")
+        print(f"Что вы хотите сделать,{polzak}?:\n 1 - Запусти протокол ВсёБеги \n 2 - Запусти протокол сортировки Загрузки \n 3 - Запустить конвертацию файлов")
         user_choose=input()
         protocol = {'1':'runalll.py','2':'sort_download.py','3':'convert_file.py'}
         try:
