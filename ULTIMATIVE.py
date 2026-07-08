@@ -10,7 +10,7 @@ def wile_comand():
     while True:
         print(f"Что вы хотите сделать,{polzak}?:\n 1 - Запусти протокол ВсёБеги \n 2 - Запусти протокол сортировки Загрузки")
         user_choose=input()
-        protocol = {'1':'runalll.py','2':'sort_download.py'}
+        protocol = {'1':'runalll.py','2':'sort_download.py','3':'convert_file.py'}
         try:
             subprocess.Popen(['python',os.path.join(script_path,r'ОчХорошаяПапка',protocol[user_choose])])
         except:
